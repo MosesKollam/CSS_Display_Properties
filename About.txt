@@ -1,0 +1,7 @@
+This is about 
+
+display: Block
+display: Inline
+display: Inline-Block
+
+It shows about the how the height and width gets affected for different displays.

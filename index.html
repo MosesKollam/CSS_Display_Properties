@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+</head>
+<body>
+    <h1>CSS Display Properties</h1>
+    <p class = "Block-Paragraph" style="display:block; background-color:red; color:white">Block Paragraph</p>
+    <p class = "Inline-Paragraph" style="display:inline; background-color: green; color:white">Inline Paragraph</p>
+    <p class = "Inline-Block-Paragraph" style="display:inline-block; background-color: blue; color:white">Inline_block_Paragraph</p>
+
+    <div class="input" style="position: fixed; top: 20px; right: 0px">
+        <form>
+            <label for = "block_p_height">Block P Height:</label>
+            <input type="range" id = "block_p_height" name = "block_p_height"
+            min = "0" max="1000" step="1" value="500"></form>
+
+            <label for = "block_p_width">Block P Width:</label>
+            <input type="range" id = "block_p_width" name = "block_p_width"
+            min = "0" max="1000" step="1" value="500"><br>
+
+            <label for = "inline_p_height">Inline P Height:</label>
+            <input type="range" id = "inline_p_height" name = "inline_p_height"
+            min = "0" max="1000" step="1" value="500"><br>
+
+            <label for = "inline_p_width">Inline P Width:</label>
+            <input type="range" id = "inline_p_width" name = "inline_p_width"
+            min = "0" max="1000" step="1" value="500"><br>
+
+            <label for = "inline_block_height">Inline Block Height:</label>
+            <input type="range" id = "inline_block_height" name = "inline_block_height"
+            min = "0" max="1000" step="1" value="500"><br>
+
+            <label for = "inline_block_width">Inline Block Width:</label>
+            <input type="range" id = "inline_block_width" name = "inline_block_width"
+            min = "0" max="1000" step="1" value="500"><br>
+        </form>
+    </div>
+
+
+<script>
+    let block_paragraph = document.getElementsByClassName("Block-Paragraph")[0];
+    let inline_paragraph = document.getElementsByClassName("Inline-Paragraph")[0];
+    let inline_block_paragraph = document.getElementsByClassName("Inline-Block-Paragraph")[0];
+
+    let block_P_height = document.getElementById("block_p_height");
+    let block_P_width = document.getElementById("block_p_width");
+    let inline_P_height = document.getElementById("inline_p_height");
+    let inline_P_width = document.getElementById("inline_p_width");
+    let inline_block_height = document.getElementById("inline_block_height");
+    let inline_block_width = document.getElementById("inline_block_width");
+
+
+
+    block_P_height.addEventListener("input",function(){
+        let val = block_P_height.value;
+        let height = "";
+        height = height+val+"px";
+        console.log("Height: ", height);
+        block_paragraph.style.height = height;
+    })
+
+    block_P_width.addEventListener("input",function(){
+        let val = block_P_width.value;
+        console.log("Width: ", val);
+        let width = "";
+        width = width+val+"px";
+        console.log("width: ", width);
+        block_paragraph.style.width = width;
+    })
+
+    inline_P_height.addEventListener("input",function(){
+        let val = inline_P_height.value;
+        console.log("Height: ", val);
+        let height = "";
+        height = height+val+"px";
+        console.log("Height: ", height);
+        inline_paragraph.style.height = height;
+    })
+
+    inline_P_width.addEventListener("input",function(){
+        let val = inline_P_width.value;
+        console.log("Width: ", val);
+
+        let width = "";
+        width = width+val+"px";
+        console.log("width: ", width);
+        inline_paragraph.style.width = width;
+    })
+
+    inline_block_height.addEventListener("input",function(){
+        let val = inline_block_height.value;
+        console.log("Height: ", val);
+
+        let height = "";
+        height = height+val+"px";
+        console.log("height: ", height);
+        inline_block_paragraph.style.height = height;
+    })
+
+    inline_block_width.addEventListener("input",function(){
+        let val = inline_block_width.value;
+        console.log("Width: ", val);
+        let width = "";
+        width = width+val+"px";
+        console.log("width: ", width);
+        inline_block_paragraph.style.width = width;
+    })
+</script>
+</body>
+</html>
